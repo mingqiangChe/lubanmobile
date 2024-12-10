@@ -52,8 +52,22 @@
   </div>
 </template>
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
 import { getCommonLink, getFriendLink } from '@/api/common';
+const commonLinks = ref();
+const friendLinks = ref();
+// onMounted(() => {
+//   // 获取常用链接
+//   const commonLinks = ref([]);
+//   getCommonLink().then((res) => {
+//     commonLinks.value = res.data;
+//   });
+//   // 获取友情链接
+//   const friendLinks = ref([]);
+//   getFriendLink().then((res) => {
+//     friendLinks.value = res.data;
+//   });
+// });
 </script>
 <style lang="scss" scoped>
 .in {
