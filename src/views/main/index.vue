@@ -13,7 +13,19 @@
           <div class="pg_r2"></div>
         </div>
       </div>
-      <div class="list"></div>
+      <div class="list">
+        <div class="iu">
+          <div class="iu_l">
+            <div class="day">18</div>
+            <div class="date">2023.10</div>
+          </div>
+          <div class="shu"></div>
+          <div class="iu_c">万科与微软你banner合作落地致力提升客户服务体验</div>
+          <div class="iu_r">
+            <el-icon><i-ep-arrow-right /></el-icon>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -78,6 +90,9 @@
       }
     }
     .list {
+      .iu {
+        border-bottom: 3px solid #f6f0e8;
+      }
     }
   }
 }

@@ -5,16 +5,32 @@ import { resolve } from 'path';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import Icons from 'unplugin-icons/vite';
+import IconsResolver from 'unplugin-icons/resolver';
 
 export default defineConfig({
   base: './',
   plugins: [
     vue(),
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        ElementPlusResolver(), // 自动导入图标组件
+        IconsResolver({ prefix: 'i' }),
+      ],
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        ElementPlusResolver(), // 自动注册图标组件
+        IconsResolver({
+          enabledCollections: ['ep'],
+        }),
+      ],
+    }),
+    Icons({
+      autoInstall: true, // 自动安装未安装的图标库
+      compiler: 'vue3', // 编译为 Vue 3 组件
+      defaultClass: 'icon', // 添加默认样式类
+      defaultStyle: 'font-size: 24px;', // 默认样式
     }),
   ],
   css: {
