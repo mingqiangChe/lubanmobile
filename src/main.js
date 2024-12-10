@@ -1,4 +1,6 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-
-createApp(App).mount('#app')
+import { createApp } from 'vue';
+import App from './App.vue';
+import VConsole from 'vconsole';
+new VConsole(); // 开启调试工具
+import 'amfe-flexible'; // 动态设置根字体
+createApp(App).mount('#app');
