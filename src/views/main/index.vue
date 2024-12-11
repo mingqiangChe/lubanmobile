@@ -185,7 +185,7 @@
 </template>
 <script setup>
 const bannerChange = (cur, prev) => {
-  console.log(cur, prev, 'jj'); //1,2,3,0
+  console.log(cur, prev, 'banner'); //1,2,3,0
 };
 const swiperChange = (cur, prev) => {
   console.log(cur, prev, 'jj'); //1,2,3,0
